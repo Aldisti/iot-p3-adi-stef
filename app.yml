@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: aldisti/app:v2
+        image: aldisti/app:v1
         ports:
         - containerPort: 80
 ---
