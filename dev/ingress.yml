@@ -3,8 +3,14 @@ kind: Ingress
 metadata:
   name: app-ingress
 spec:
-  defaultBackend:
-    service:
-      name: app-service
-      port:
-        number: 80
+  rules:
+  - http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: app-service
+            port:
+              number: 80
+
